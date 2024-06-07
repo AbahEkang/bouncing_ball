@@ -10,6 +10,7 @@ class Ball
 public:
 	Ball(const Vec2& pos, const Vec2& vel);
 	void Draw(Graphics& gfx) const;
+	void Update(float dt);
 private:
 	static constexpr float radius{ 7.0f };
 	static constexpr Color color{ Colors::Red };
