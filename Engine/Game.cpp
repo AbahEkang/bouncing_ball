@@ -44,7 +44,7 @@ Game::Game( MainWindow& wnd )
 			
 			bricks[index] = Brick(RectF(topLeft.x, topLeft.x + brickWidth, topLeft.y, topLeft.y + brickHeight), c);
 			index++;
-			topLeft.x += brickWidth + 2.0f;
+			topLeft.x += brickWidth;
 			
 			if (topLeft.x >= float(Graphics::ScreenWidth))
 			{
@@ -52,7 +52,7 @@ Game::Game( MainWindow& wnd )
 			}
 			
 		}
-		topLeft.y += brickHeight + 2.0f;
+		topLeft.y += brickHeight;
 		topLeft.x = 0.0f;
 	}
 }

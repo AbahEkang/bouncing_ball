@@ -11,7 +11,7 @@ void Brick::Draw(Graphics& gfx) const
 {
 	if (!destroyed)
 	{
-		gfx.DrawRect(m_rectangle, m_color);
+		gfx.DrawRect(m_rectangle.GetExpanded(-padding), m_color);
 
 	}
 }
