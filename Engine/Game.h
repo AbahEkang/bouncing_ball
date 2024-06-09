@@ -32,9 +32,9 @@
 class Game
 {
 public:
-	Game( class MainWindow& wnd );
-	Game( const Game& ) = delete;
-	Game& operator=( const Game& ) = delete;
+	Game(class MainWindow& wnd);
+	Game(const Game&) = delete;
+	Game& operator=(const Game&) = delete;
 	void Go();
 private:
 	void ComposeFrame();
@@ -47,8 +47,13 @@ private:
 	Graphics gfx;
 	/********************************/
 	/*  User Variables              */
+	static constexpr float brickWidth{ 40.0f };
+	static constexpr float brickHeight{ 24.0f };
+	static constexpr int nBricksAccross{ 12 };
+	static constexpr int nBricksDown{ 4 };
+	static constexpr int nBricks{ nBricksAccross * nBricksDown };
 	Ball ball;
-	Brick brick;
+	Brick bricks[nBricks];
 	FrameTimer ft;
 	RectF walls;
 	Sound soundPad;
