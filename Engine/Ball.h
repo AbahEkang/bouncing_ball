@@ -14,7 +14,8 @@ public:
 	bool DoWallCollision(const RectF& walls);
 	void ReboundX();
 	void ReboundY();
-	RectF& GetRect() const;
+	RectF GetRect() const;
+	Vec2 GetVelocity() const;
 private:
 	static constexpr float radius{ 7.0f };
 	static constexpr Color color{ Colors::Red };
